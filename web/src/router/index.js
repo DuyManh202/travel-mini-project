@@ -5,7 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import Blog from '../views/Blog.vue'
 import Travel from '../views/Travel.vue'
 import Contact from '../views/Contact.vue'
-
+import Register from '../components/Register.vue'
 
 const router = createRouter({
     history: createWebHistory(
@@ -24,6 +24,12 @@ const router = createRouter({
             component: Login
         },
 
+        {
+            path: '/register',
+            name: 'register',
+            component: Register
+
+        },
         {
             path: '/blog',
             name: 'blog',

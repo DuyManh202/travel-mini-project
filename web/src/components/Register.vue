@@ -1,10 +1,11 @@
 <template class="login">
   <div class="box">
 <v-car>
-    <div class="container">
-        <div >
-            <header>Login</header>
-        </div>
+    <v-content class="container">
+            <header>
+                 
+              
+            </header>
         <div class="input-field">
             <input type="text" class="input" placeholder="Username" id="">
             <i class='bx bx-user' ></i>
@@ -13,13 +14,9 @@
             <input type="Password" class="input" placeholder="Password" id="">
             <i class='bx bx-lock-alt'></i>
         </div>
-        <div class="input-field">
-            <input type="submit" class="submit" value="Login" id="">
-            
-        </div>
-        
         <div class="two-col">
             <div class="one">
+
                <input type="checkbox" name="" id="check">
                <label for="check"> Remember Me</label>
             </div>
@@ -27,13 +24,42 @@
                 <label><a href="#">Forgot password?</a></label>
             </div>
         </div>
-    </div>
+
+        <div class="input-field">
+          
+            <v-spacer>
+                <v-btn
+            rounded=""
+            class="ma-2 pa-2">
+             Đăng ký 
+
+            </v-btn>
+        
+             <v-btn
+             :to='{name: "register"}'
+            rounded=""
+            > Đăng nhập
+            </v-btn>
+        
+            </v-spacer>
+            
+           </div>
+        
+        
+    </v-content>
   </v-car>
 </div>  
+
 </template>
 
 <script>
-export default {
+export default {setup() {
+    const goTo = (to) => {
+      console.log(to)
+    }
+    return {goTo}
+ 
+}
 
 }
 </script>
@@ -49,13 +75,14 @@ background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 92vh;
 }
 .container{
     width: 350px;
     display: flex;
     flex-direction: column;
     padding: 0 15px 0 15px;
+    background-color: rgba(0, 0, 0, 0.136);
     
 }
 span{
@@ -82,6 +109,7 @@ header{
     padding: 0 0 0 45px;
     background: rgba(255,255,255,0.1);
     outline: none;
+    margin: 2px;
 }
 i{
     position: relative;
@@ -98,7 +126,7 @@ i{
     font-size: 15px;
     height: 45px;
     outline: none;
-    width: 100%;
+    width:40%;
     color: black;
     background: rgba(255,255,255,0.7);
     cursor: pointer;
