@@ -1,0 +1,12 @@
+web: npm run dev
+api: python3 -m uvicorn main:app --reload
+push code to github: 
+git add .
+git commit -m "teen commit"
+git push origin master
+---------------------
+viec 1 : hoan thanh hai bien 2 con lai
+viec 2 : tao 1 components moi chua 1 cot xong roi import ra trang blog roi chuyen du lieu vao tung cot (dung props de chuyen du lieu ra tung cot)
+----------------------------------
+Get : la dung de tra ve du lieu tu sv
+Post: Gui len sv 

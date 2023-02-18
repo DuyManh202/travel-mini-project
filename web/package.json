@@ -8,7 +8,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tinymce/tinymce-vue": "^5.0.0",
+    "@tiptap/starter-kit": "^2.0.0-beta.212",
+    "@tiptap/vue-3": "^2.0.0-beta.212",
+    "@vueup/vue-quill": "^1.1.0",
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "jade": "^1.11.0",
     "material-design-icons-iconfont": "^6.7.0",
+    "pug": "^3.0.2",
+    "save-dev": "^0.0.1-security",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
     "vuetify": "^3.0.5"
@@ -17,6 +26,10 @@
     "@mdi/font": "^7.1.96",
     "@mdi/js": "^7.1.96",
     "@vitejs/plugin-vue": "^4.0.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
     "vite": "^4.0.0"
   }
 }
