@@ -36,3 +36,4 @@ services:
     # entrypoint: ['poetry', 'run']
     depends_on:
       - db
+      -
