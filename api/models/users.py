@@ -13,17 +13,16 @@ class Users(BaseModel):
     address = p.TextField()
     is_admin = p.BooleanField()
 
+    class Meta:
+        db_table = 'users'
 
-class Meta:
-        db_table = 'user'
-
-@classmethod
+    @classmethod
     # def get_list(cls):
     #     query = cls.select().order_by(score)
     #     return list(query)
-
-def get_user(data):
-        query = Users.select().where(Users.email == data['email'] and Users.password == data['password'])
+    def get_user(cls,data):
+        query = Users.select().where(
+            Users.email == data['email'] and Users.password == data['password'])
         query = list(query)
         if len(query):
             return {"code": 200, "data": query}

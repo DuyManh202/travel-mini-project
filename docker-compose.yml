@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+
+  db:
+    image: postgres
+    ports:
+      - 1200:5432
+    volumes:
+      - ./docker/postgres/data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  backend:
+    container_name: mini_project_backend
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/app/backend
+    ports:
+      - 1100:8000
+    entrypoint: ['poetry', 'run']
+    depends_on:
+      - db
+    command: ['uvicorn', 'main:app', '--reload', '--host', '0.0.0.0', '--port', '8000']
+
