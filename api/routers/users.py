@@ -1,7 +1,6 @@
 from playhouse.shortcuts import model_to_dict
-from peewee import fn
-from models.users import Users
-from pydantic import BaseModel
+from models.users import Users as UsersModel
+from schema import user as user_schema
 from fastapi import APIRouter
 
 router = APIRouter()
@@ -10,26 +9,25 @@ router = APIRouter()
 def get_all_users():
     """Get all users"""
     
-    users = Users.select().order_by(Users.id.desc(),)
+    users = UsersModel.select().order_by(UsersModel.id.desc(),)
     users = [model_to_dict(user) for user in users]
     return users
 
 
 @router.post("/api/users")
-def create_user(payload_: Users):
+def create_user(payload_: user_schema.UserCreate):
     """Create a new user"""
-    print("ada")
     payload = payload_.dict()
-    user = Users.create(**payload)
+    user = UsersModel.create(**payload)
     return user.id
 
 
-@router.patch("/api/users/{id}", response_model=int)
-def edit_user(id: int, payload_: Users):
+@router.patch("/api/users/{id}")
+def edit_user(id: int, payload_: user_schema.UserUpdate):
     """Update user info"""
     payload = payload_.dict()
     user = (
-        Users.update(
+        UsersModel.update(
             ib =payload["id"],
             email=payload["email"],
             password=payload["password"],
@@ -39,7 +37,7 @@ def edit_user(id: int, payload_: Users):
             is_admin=payload["is_admin"],
         )
         
-        .where(Users.id == id)
+        .where(UsersModel.id == id)
         .execute()
     )
     # number of changed rows
@@ -49,7 +47,7 @@ def edit_user(id: int, payload_: Users):
 @router.delete("/api/users/{id}")
 def user_employee(id: int):
     """Delete user"""
-    user = Users.get_by_id(id)
+    user = UsersModel.get_by_id(id)
     user.delete_instance()
                                         
                                         
