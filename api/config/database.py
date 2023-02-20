@@ -1,6 +1,7 @@
 from contextvars import ContextVar
 
 import peewee
+from playhouse.postgres_ext import PostgresqlExtDatabase
 
 DB_NAME = 'postgres'
 DATABASE = 'postgres'
@@ -24,7 +25,7 @@ class PeeweeConnectionState(peewee._ConnectionState):
         return self._state.get()[name]
 
 
-db = peewee.PostgresqlExtDatabase(
+db = PostgresqlExtDatabase(
     DB_NAME, user=USER, password=PASSWORD, host=POSTGRES_HOST, port=POSTGRES_PORT, check_same_thread=False
 )
 
