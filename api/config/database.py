@@ -26,7 +26,12 @@ class PeeweeConnectionState(peewee._ConnectionState):
 
 
 db = PostgresqlExtDatabase(
+<<<<<<< HEAD
     DB_NAME, user=USER, password=PASSWORD, host=POSTGRES_HOST, port=POSTGRES_PORT, autorollback=True,
+=======
+    DB_NAME, user=USER, password=PASSWORD, host=POSTGRES_HOST, port=POSTGRES_PORT,
+    autorollback=True,
+>>>>>>> 6292363e37be6e4096a75815321bcb05b667960b
 )
 
 db._state = PeeweeConnectionState()
