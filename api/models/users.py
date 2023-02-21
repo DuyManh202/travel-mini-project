@@ -5,7 +5,6 @@ import peewee as p
 
 
 class Users(BaseModel):
-    id = p.PrimaryKeyField()
     email = p.TextField()
     password = p.TextField()
     name = p.TextField()
@@ -28,3 +27,4 @@ class Users(BaseModel):
             return {"code": 200, "data": query}
         else:
             return {"code": 400, 'data': query}
+        
