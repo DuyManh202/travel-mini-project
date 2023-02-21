@@ -1,18 +1,18 @@
 <template>
 <div class="Content">
   <div class="box-menu"><commentMagement></commentMagement></div>
-    <div class="title-content" style="color: #eee">
+<div class="title-content" style="color: #eee">
       <i style="margin-right: 5px" class="fas fa-plus-square"></i>
-      Thêm blogs mới
+      Thêm travel viết mới
     </div>
     <v-content>
- <table style="width: 100%; margin: 5px;">
-    <tbody><tr style="font-weight: 600; color: #000; font-size: 18px;">
+ <table style=" margin: 5px;">
+    <tbody ><tr style="font-weight: 600; color: #000; font-size: 18px;  ">
         <td colspan="8" style="text-align: left">
             <i class="fas fa-bars" style="margin-right: 3px;"></i>
             Danh sách Comment</td>
     </tr>
-    <tr style="background: #fff; text-align: center">
+    <tr style="background: #fff; text-align: center ">
         <td style="color: #cc0000; font-weight: 500">STT</td>
         <td style="color: #115095; font-weight: 500">Id</td>
         <td style="color: #115095; font-weight: 500">Người dùng</td>
@@ -51,6 +51,19 @@ export default {
   width: 15%;
   min-height: 230px;
   height: 100%;
+}
+.title-content {
+  line-height: 30px;
+  padding-left: 5px;
+  background: #0056b3;
+  width: 100%;
+  min-width: 1070px;
+  height: 30px;
+}
+.tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
 }
 
 </style>

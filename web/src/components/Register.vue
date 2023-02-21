@@ -3,7 +3,8 @@
 <v-car>
     <v-content class="container">
             <header>
-                 
+                                 <h4>  Đăng Ký  </h4>
+
               
             </header>
         <div class="input-field">
@@ -14,6 +15,15 @@
             <input type="Password" class="input" placeholder="Password" id="">
             <i class='bx bx-lock-alt'></i>
         </div>
+        <div class="input-field">
+            <input type="Password" class="input" placeholder="Password" id="">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+        <div class="input-field">
+            <input type="Password" class="input" placeholder="Password" id="">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+        
         <div class="two-col">
             <div class="one">
 
@@ -75,7 +85,7 @@ background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 92vh;
+    min-height: 100vh;
 }
 .container{
     width: 350px;

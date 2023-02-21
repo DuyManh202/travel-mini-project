@@ -43,7 +43,6 @@ def edit_user(id: int, payload_: user_schema.UserUpdate):
     # number of changed rows
     return user
 
-
 @router.delete("/api/users/{id}")
 def user_employee(id: int):
     """Delete user"""

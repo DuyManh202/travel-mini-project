@@ -19,7 +19,7 @@
                 <td>
                   <i class="fas fa-plus-square"></i>
                   <span style="font-weight: 600">Các thành phần</span>
-                </td>
+                </td> 
               </tr>
               <tr>
                 <td style="background: #f2f2f2">
