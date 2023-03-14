@@ -1,6 +1,6 @@
 from . import PeeWeeBaseModel
 import peewee as p
-from base_model import BaseModel
+from .base_model import BaseModel
 
 
 class Blogs(BaseModel):

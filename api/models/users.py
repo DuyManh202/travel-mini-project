@@ -1,7 +1,6 @@
 from . import PeeWeeBaseModel
 from models.base_model import BaseModel
 import peewee as p
-# TODO sua class Users ke thua BaseModel
 
 
 class Users(BaseModel):
@@ -27,4 +26,3 @@ class Users(BaseModel):
             return {"code": 200, "data": query}
         else:
             return {"code": 400, 'data': query}
-        

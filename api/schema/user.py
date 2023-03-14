@@ -9,10 +9,6 @@ class UsersBase(BaseModel):
     is_admin: bool = False
 
 
-class Users(UsersBase):
-    id: int
-
-
 class UserCreate(UsersBase):
     pass
 
